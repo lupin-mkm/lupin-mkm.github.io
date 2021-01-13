@@ -1,12 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const HeaderTag = styled.header`
+  text-align: center;
+  padding: 200px 0;
+`
+
+const Title = styled.h1`
+  font-size: 32px;
+  font-family: "Open sans", sans-serif;
+`
 
 export const Header = () => {
   return (
-    <header>
-      <h1>
+    <HeaderTag>
+      <Title>
         <div>MKM</div>
         <div>PORTFOLIO</div>
-      </h1>
-    </header>
+      </Title>
+    </HeaderTag>
   )
 }

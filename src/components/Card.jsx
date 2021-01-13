@@ -1,20 +1,44 @@
 import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
+const FigTag = styled.figure`
+  text-align: center;
+  width: calc(100%/3);
+  padding: 0 5px;
+  box-sizing: border-box;
+`
+
+const Link = styled.a`
+  position: relative;
+  text-decoration: none;
+`
+
+const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+  border: solid 1px black;
+`
+
+const FigCaption = styled.figcaption`
+  text-align: center;
+`
 
 export const Card = ({ data }) => {
-  console.log(data)
   return (
-    <figure>
-      <a href="#">
-        <img
+    <FigTag>
+      <Link href={`#${data.title}`}>
+        <Image
           src={data.image}
         />
-      </a>
-      <figcaption>
+      </Link>
+      <FigCaption>
         <div>{data.title}</div>
         <div>
-          <a href="#">Link</a>
+          <a href={`#${data.title}`}><FontAwesomeIcon icon={faLink} /></a>
         </div>
-      </figcaption>
-    </figure>
+      </FigCaption>
+    </FigTag>
   )
 }

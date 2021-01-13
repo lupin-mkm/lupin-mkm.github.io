@@ -1,31 +1,46 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const ContactTag = styled.div`
+  padding: 20px 0;
+`
+
+const TitleTag = styled.div`
+  text-align: center;
+  padding: 20px 0;
+`
+const Title = styled.h2`
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Open sans", sans-serif;
+`
+
+const MailTag = styled.div`
+  text-align: center;
+`
+
+const MailAbout = styled.p`
+  font-size: 18px;
+`
+
+const Mail = styled.p`
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: bold;
+`
 
 export const Contact = () => {
   return (
-    <div>
-      <div>
-        <h2>CONTACT</h2>
-      </div>
+    <ContactTag>
+      <TitleTag id="contact">
+        <Title>CONTACT</Title>
+      </TitleTag>
 
-      <div>
-        <p>お問い合わせはSNSかメールでお願いします</p>
-      </div>
+      <MailTag>
+        <MailAbout>お問い合わせはメールでお願いします</MailAbout>
+        <Mail>taikiinu@gmail.com</Mail>
+      </MailTag>
 
-      <div>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="#"></img>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="#"></img>
-            </a>
-          </li>
-        </ul>
-        <div>xxxx@sample.com</div>
-      </div>
-    </div>
+    </ContactTag>
   )
 }
