@@ -35,11 +35,13 @@ const DescFont = styled.p`
 `
 
 const settings={
+  arrows: true,
   dots: true,
   infinite: true,
-  speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 0,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '50px',
 }
 
 export const Detail = ({ data }) => {
