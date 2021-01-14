@@ -16,7 +16,7 @@ const Link = styled.a`
 `
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 90%;
   height: auto;
   border: solid 1px black;
 `
