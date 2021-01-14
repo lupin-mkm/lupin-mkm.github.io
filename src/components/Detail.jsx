@@ -40,8 +40,6 @@ const settings={
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: '50px',
 }
 
 export const Detail = ({ data }) => {
