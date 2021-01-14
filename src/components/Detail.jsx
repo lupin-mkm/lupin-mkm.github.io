@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const ImageTag= styled.div`
   padding: 10px;
@@ -8,9 +11,9 @@ const ImageTag= styled.div`
 `
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 70%;
+  margin: auto;
   height: auto;
-  border: solid 1px black;
 `
 
 const DetailTag = styled.div`
@@ -31,11 +34,29 @@ const DescTag = styled.div`
 const DescFont = styled.p`
 `
 
+const settings={
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+}
+
 export const Detail = ({ data }) => {
   return (
     <div id={data.title}>
       <ImageTag>
-        <Image src={data.image} />
+        <Slider {...settings}>
+          <div>
+            <Image src={data.image} />
+          </div>
+          <div>
+            <Image src={data.image} />
+          </div>
+          <div>
+            <Image src={data.image} />
+          </div>
+        </Slider>
       </ImageTag>
       <DetailTag>
         <DetailFont>{data.title}</DetailFont>
